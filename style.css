@@ -1,79 +1,179 @@
-/* GLOBAL STYLES */
+/* Base Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f5; /* Light background color for the overall page */
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/* HEADER STYLES */
-header {
-    background-color: #337ab7;
-    color: white;
-    padding: 1.5em; /* Use em unit for padding */
-    text-align: center;
-    margin-bottom: 25px; /* Use margin to separate each section */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 5px;
 }
 
-header h1 {
-    margin: 0;
+/* Variables and Color Scheme */
+:root {
+    --primary-red: #cc0000;
+    --light-gray: #f9f9f9;
+    --medium-gray: #555;
 }
 
-/* PROFILE SECTION STYLES (Applies Box Model Principles) */
-.profile-section {
-    /* 1. Center-align the section using margin: auto and a fixed width. [cite: 18] */
-    width: 800px; /* Fixed width in px unit */
-    margin: 0 auto; /* Center alignment */
-    
-    /* 2. Add a light background color to the profile section. [cite: 24] */
-    background-color: #ffffff; 
-    
-    /* 3. Add a border around the section. [cite: 21] */
+/* Section Headings */
+.header-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* Status Bar / Navigation */
+.status-bar {
+    font-size: 0.9em;
+    color: var(--medium-gray);
+    margin-bottom: 25px;
+}
+
+/* Form Layout */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+/* Responsive Layout for wide screens */
+@media (min-width: 768px) {
+    .form-row {
+        flex-direction: row;
+        align-items: center;
+    }
+    .form-row label {
+        flex: 1; /* 1/3 width for label */
+        text-align: right;
+        padding-right: 20px;
+        margin-bottom: 0;
+    }
+    .form-row input[type="text"], 
+    .form-row input[type="email"], 
+    .form-row select, 
+    .form-row .input-group {
+        flex: 2; /* 2/3 width for input area */
+    }
+}
+
+/* Inputs and Selects */
+input[type="text"], input[type="email"], select, textarea {
+    padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+    border-color: var(--primary-red);
+    box-shadow: 0 0 5px rgba(204, 0, 0, 0.5);
+    outline: none;
+}
     
-    /* 4. Add padding inside the profile box. [cite: 20] */
-    padding: 20px; /* Fixed padding in px unit */
+/* Required Asterisk */
+.required::after {
+    content: '*';
+    color: var(--primary-red);
+    margin-left: 2px;
+}
     
-    /* 5. Use margin to separate each section. [cite: 22] */
-    margin-bottom: 25px; 
+/* Inline Groupings (Radio/Checkbox) */
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
     
-    text-align: center; /* Center content within the box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+.radio-option input[type="radio"], 
+.radio-option input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: var(--primary-red);
 }
 
-/* IMAGE STYLES */
-.profile-photo {
-    width: 250px; /* Fixed width in px */
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    
-    /* Round the student image corners using border-radius. [cite: 23] */
-    border-radius: 10%; 
-    border: 3px solid #337ab7;
+/* Amount and Recurring Inputs */
+.small-input {
+    width: 60px !important;
+    padding: 5px !important;
+    display: inline-block;
+    margin: 0 5px;
 }
 
-/* TEXT STYLES */
-h2 {
-    color: #004d99;
-    font-size: 2em; /* Use em unit for font size [cite: 23] */
-}
-
-h3 {
-    color: #555;
-    margin-top: 20px;
-}
-
-p.bio {
-    text-align: justify;
-    padding: 0 20px;
-}
-
-/* FOOTER STYLES */
-footer {
-    background-color: #333;
-    color: white;
+/* Action Buttons */
+.button-group {
     text-align: center;
-    padding: 1em;
-    font-size: 0.9em; /* Use em unit for font size [cite: 23] */
+    padding: 20px 0;
+}
+
+.btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+.btn-reset {
+    background-color: #ddd;
+    color: var(--medium-gray);
+}
+
+.btn-reset:hover {
+    background-color: #ccc;
+}
+
+.btn-continue {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+.btn-continue:hover {
+    background-color: #a30000;
+}
+
+/* Footer */
+.security-footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+.security-footer svg {
+    vertical-align: middle;
+    margin-right: 5px;
+    fill: green;
 }
