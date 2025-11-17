@@ -1,0 +1,55 @@
+/* GLOBAL STYLES */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+/* SECTION STYLES (Used by class selector) */
+.page-section {
+    padding: 30px; /* Adjust spacing using margin and padding [cite: 22] */
+    margin: 20px auto; /* Adjust spacing using margin and padding [cite: 22] */
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* UNIQUE BACKGROUND COLORS (Used by ID selectors) [cite: 18] */
+#about-me {
+    background-color: #e6f7ff; /* Light Blue */
+}
+
+#education {
+    background-color: #fff0e6; /* Light Peach */
+}
+
+#hobbies {
+    background-color: #f0e6ff; /* Light Lavender */
+}
+
+/* CUSTOM HR STYLES [cite: 21] */
+.custom-hr {
+    border: none;
+    height: 5px; /* Custom height [cite: 21] */
+    width: 70%; /* Custom width [cite: 21] */
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+/* Custom HR Colors */
+.blue-hr {
+    background-color: #3333ff; /* Custom color [cite: 21] */
+}
+
+.orange-hr {
+    background-color: #ff9933; /* Custom color [cite: 21] */
+}
