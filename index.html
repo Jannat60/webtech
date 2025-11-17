@@ -1,0 +1,194 @@
+<<<<<<< HEAD
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="secondtask.css">
+</head>
+
+<body>
+  <form action="/register" method="POST">
+    <h2>Registration Form</h2>
+
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password" required>
+
+    <label>Gender:</label>
+    <div class="gender-group">
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" required>
+      <label for="female">Female</label>
+    </div>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="USA">USA</option>
+      <option value="India">India</option>
+      <option value="UK">UK</option>
+    </select>
+
+    <label class="terms">
+      <input type="checkbox" id="terms" name="terms" required>
+      I agree to the terms and conditions.
+    </label>
+
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyFlash | Home - Your Source for Instant News</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="DailyFlash - Breaking news and trending stories from around the world.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header> 
+        <img src="image.png" 
+             alt="DailyFlash Logo" 
+             style="float: left; height: 50px; width: auto; margin-right: 10px;">
+        <h1>DailyFlash</h1>
+        <p>Your Source for Instant News</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" style="font-weight: bold; color: blue;">Home</a></li>
+            <li><a href="world.html">World</a></li>
+            <li><a href="sports.html">Sports</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+    
+    <div id="content-layout"> 
+        
+        <main>
+            <h2>Latest News & Features</h2>
+            <section id="latest-stories">
+                
+                <article>
+                    <h2>World Leaders Meet for Climate Summit</h2>
+                    <time datetime="2025-11-15">Published: November 15, 2025</time>
+                    <br>
+                    <p>
+                        Heads of state from over a dozen nations convened today to finalize a landmark global climate accord. 
+                        The discussions focused on new carbon neutrality targets and financial aid for developing nations to transition to green energy. 
+                        Experts say this is a critical step, but challenges remain.
+                    </p>
+                    <p><a href="world_summit_full.html">Read More &raquo;</a></p>
+                </article>
+
+                <hr>
+
+                <article>
+                    <h2>National Team Wins Championship in Historic Final</h2>
+                    <time datetime="2025-11-14">Published: November 14, 2025</time>
+                    <br>
+                
+                    <p>
+                        In a thrilling match that went into overtime, the national football team secured their first championship title in two decades. 
+                        The final goal was scored in the 98th minute by veteran striker. 
+                        Fans celebrated late into the night, marking a monumental victory for the country's sports history.
+                    </p>
+                    <p><a href="sports_championship_full.html">Read More &raquo;</a></p>
+                </article>
+
+                <hr>
+
+                <article>
+                    <h2>New Smartphone Sets Record Sales on Opening Day</h2>
+                    <time datetime="2025-11-13">Published: November 13, 2025</time>
+                    <br>
+                    
+                    <p>
+                        The much-anticipated 'Nova X' smartphone has shattered previous sales records, selling out its initial global stock within 12 hours of launch. 
+                        Analysts credit the success to its revolutionary camera technology and extended battery life. 
+                        The company has apologized for the low stock and promises to ramp up production.
+                    </p>
+                    <p><a href="tech_smartphone_full.html">Read More &raquo;</a></p>
+                </article>
+
+            </section>
+        </main>
+        
+        <aside>
+            <h3>Top Headlines</h3>
+            <ul>
+                <li><a href="#">Inflation Rises to 10-Year High</a></li>
+                <li><a href="#">Local Artist Wins Prestigious Award</a></li>
+                <li><a href="#">New Policy Affecting Student Loans Approved</a></li>
+                <li><a href="#">Space Telescope Discovers New Exoplanet</a></li>
+                <li><a href="#">City Council Votes on New Public Transport Plan</a></li>
+            </ul>
+            
+            <hr>
+
+            <div id="editor-picks">
+                <h4>✨ Editor's Pick</h4>
+                <p>
+                    <a href="#">**MUST READ:** Exclusive Interview with the Central Bank Governor.</a>
+                </p>
+                <p>
+                    <a href="#">Why Virtual Reality Training is the Future of Education.</a>
+                </p>
+            </div>
+            
+            <hr>
+            
+            <div id="advertisement">
+                <p><strong>ADVERTISEMENT</strong></p>
+                <p>Sponsored by: GlobalTech Solutions - Your Future, Secured.</p>
+                <a href="#"></a>
+            </div>
+        </aside>
+
+    </div> 
+    
+    <p style="text-align: center;"><a href="#">Back to Top</a></p>
+
+    <hr>
+
+    <footer>
+        <p>
+            &copy; 2025 DailyFlash. All Rights Reserved.
+        </p>
+        
+        <div id="social-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">X (Twitter)</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">LinkedIn</a>
+        </div>
+        
+        <p>A Product of DailyFlash Media Company.</p>
+    </footer>
+
+</body>
+</html>
+>>>>>>> 5e8ea82 (Completed Lab Task 05: DailyFlash Multi-Page Website)
